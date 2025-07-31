@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emanuele Passilongo</title>
+  <link rel="icon" href="STAR_WHITE.png" type="image/png" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: white;
+      overflow: hidden;
+      cursor: none;
+    }
+    .background-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+    .menu {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 98vh;
+      margin: 0 10%;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.45;
+      text-align: center;
+    }
+    .menu a {
+      color: white;
+      text-decoration: none;
+      position: relative;
+      padding: 20px;
+      margin: -20px;
+      cursor: none;
+    }
+    .menu a:hover {
+      text-decoration: underline;
+    }
+    .logo {
+      text-align: justify;
+    }
+    .custom-cursor {
+      position: fixed;
+      top: 0; left: 0;
+      width: 70px; height: 70px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      background-color: white;
+      mix-blend-mode: difference;
+      transition: transform 0.08s ease-out;
+    }
+    @media (max-width: 1300px) {
+      .menu {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15%;
+        margin: 0 5%;
+        height: 85%;
+        padding: 40px 0;
+        font-size: 15.5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="HOME_BACKGROUND_V03_4K.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="overlay"></div>
+
+  <nav class="menu">
+    <a href="Index.html" class="logo">Emanuele Passilongo<br />Portfolio © 2025</a>
+    <a href="https://youtube.com/playlist?list=PLvG3OE6tGIJI1WUCa-3_CI0hSzPfj5XUL&feature=shared" target="_blank" rel="noopener noreferrer">Latest edits</a>
+    <a href="Contact.html">Get in touch</a>
+    <a href="ComingSoon.html">Coming soon</a>
+    <div class="custom-cursor"></div>
+  </nav>
+
+  <script>
+    const cursor = document.querySelector('.custom-cursor');
+    document.addEventListener('mousemove', e => {
+      cursor.style.transform = `translate(${e.clientX - 35}px, ${e.clientY - 35}px)`;
+    });
+  </script>
+</body>
+</html>

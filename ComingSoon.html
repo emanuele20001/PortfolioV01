@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emanuele Passilongo Portfolio</title>
+    <link rel="icon" href="STAR_WHITE.png" type="image/png" />
+  <style>
+
+       * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      background-color: black;
+      color: white;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      flex-direction: column;
+      cursor: none;
+    }
+
+  .full-width-line {
+  width: 100%;
+  max-width: 120vw;
+  height: 1px;
+  background-color: white;
+  margin: 5rem; /* spazio verticale fluido */
+}
+
+  nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.7rem 4rem;
+      font-size: 15px;
+      gap: 1rem;
+    }
+
+      a {
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      padding: 20px;
+      margin: -20px;
+      cursor: none;
+    }
+
+      .nav-left, .nav-center, .nav-right {
+      display: flex;
+      align-items: center;
+      flex: 1;
+    }
+
+    .nav-left  { justify-content: flex-start; }
+    .nav-center { justify-content: center; }
+    .nav-right  { justify-content: flex-end; }
+
+    .nav-link {
+      white-space: nowrap;
+    }
+
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+
+  .container {
+  width: 100%;                  /* Usa tutta la larghezza disponibile */
+  max-width: 1200px;            /* Non superare mai i 1200px */
+  margin: 0 auto;               /* Centra orizzontalmente */
+  padding: 40px clamp(16px, 5vw, 32px); /* Padding laterale responsive */
+}
+
+    .subtext {
+      text-align: center;
+      font-size: 13px;
+      color: #ffffff;
+      margin-bottom: 30px;
+    }
+
+    .projects {
+      display: flex;
+      margin: -1px;
+      justify-content: center;
+      flex-wrap: wrap; 
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-bottom: 10vh;
+    }
+
+    .project {
+      border: 1px solid #ffffff;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 32%; /* o anche 100% per full width */
+      min-width: 480px; /* o anche 100% per full width */
+      flex: 1 1 1;
+    }
+
+    .project video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+    }
+
+    .info {
+      padding: 5%;
+    }
+
+    .info h2 {
+      font-size: 22px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 1.5%;
+      letter-spacing: 0.3px;
+      line-height: 1.3;
+    }
+
+    .category {
+      font-size: 15px;
+      color: #ffffff;
+      margin-bottom: 8px;
+      margin-bottom: 5%;
+    }
+
+    .description {
+      font-size: 14px;
+      color: #ffffff;
+      line-height: 2;
+    }
+
+   footer {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      margin: 25px;
+      text-align: right;
+      font-size: 14.5px;
+      line-height: 1.6;
+    }
+
+    .love {
+      font-size: 16px;
+      margin-bottom: 4rem;
+      text-align: left;
+      margin-top: 6%;
+      margin-left: 3vh;
+      margin-bottom: 6vh;
+    }
+
+      .custom-cursor {
+      position: fixed;
+      top: 0; left: 0;
+      width: 70px; height: 70px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      background-color: white;
+      mix-blend-mode: difference;
+      transition: transform 0.08s ease-out;
+    }
+
+
+@media (max-width: 1200px) {
+  .projects {
+    justify-content: center;
+    
+  }
+
+  .project {
+    width: 100%;                /* Occupano tutta la larghezza */
+    max-width: 360px;           /* Mantieni larghezza max */
+  }
+
+  .info h2 {
+      font-size: 18px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 1.5%;
+      letter-spacing: 0.3px;
+      line-height: 1.3;
+    }
+
+     .category {
+      font-size: 13px;
+      color: #ffffff;
+      margin-bottom: 8px;
+      margin-bottom: 5%;
+    }
+
+    .description {
+      font-size: 13px;
+      color: #ffffff;
+      line-height: 2;
+    }
+
+    .love {
+      font-size: 16px;
+      margin-bottom: 4rem;
+      text-align: left;
+      margin-top: 5%;
+      margin-left: 3vh;
+      margin-bottom: 3vh;
+
+    }
+
+}
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+  <nav>
+    <div class="nav-left">
+      <a href="Index.html"><div class="nav-link">Back home</div></a>
+    </div>
+    <div class="nav-center">
+      <a href="https://youtube.com/playlist?list=PLvG3OE6tGIJI1WUCa-3_CI0hSzPfj5XUL&feature=shared" target="_blank" rel="noopener noreferrer">
+        <div class="nav-link">Latest edits</div>
+      </a>
+    </div>
+    <div class="nav-right">
+      <a href="Contact.html"><div class="nav-link">Get in touch</div></a>
+    </div>
+  </nav>
+
+  <hr class="custom-line">
+    <p class="love">Lovingly working on:</p>
+
+    <section class="projects">
+      <article class="project">
+        <video autoplay muted loop playsinline>
+          <source src="SUCCUBUS PREVIEW.mp4" type="video/mp4" />
+        </video>
+        <div class="info">
+          <h2>ONE DAY I DREAMED THAT YOU KILLED ME</h2>
+          <p class="category">Short-film, graphic design</p>
+          <p class="description">
+            Every nightmare is a grotesque ballet of forgotten memories. This gothic fairy tale is no exception.
+          </p>
+        </div>
+      </article>
+
+      <article class="project">
+        <video autoplay muted loop playsinline>
+          <source src="ELETTA BPREVIEW.mp4" type="video/mp4" />
+        </video>
+        <div class="info">
+          <h2>L’ELETTA</h2>
+          <p class="category">Short-film, editing</p>
+          <p class="description">
+            Tania is a talented street dancer who gets a big opportunity, but something stands in the way of her reaching her dream.
+          </p>
+        </div>
+      </article>
+
+      <article class="project">
+        <video autoplay muted loop playsinline>
+          <source src="SOSPESI PREVIEW.mp4" type="video/mp4" />
+        </video>
+        <div class="info">
+          <h2>SOSPESI</h2>
+          <p class="category">Fashion-film, editing</p>
+          <p class="description">
+            An artist wakes up in an unfamiliar wild landscape. He finds clues about a mysterious figure who appears to him in dreams.
+          </p>
+        </div>
+      </article>
+    </section>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+
+  <div>
+  
+  </div>
+    
+    <footer>
+      <p>Emanuele Passilongo<br>Portfolio © 2025</p>
+    </footer>
+  </main>
+
+    <script>
+    const cursor = document.querySelector('.custom-cursor');
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.transform = `translate(${e.clientX - 35}px, ${e.clientY - 35}px)`;
+    });
+  </script>
+</body>
+</html>

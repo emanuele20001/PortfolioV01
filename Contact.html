@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emanuele Passilongo - Get in touch</title>
+  <link rel="icon" href="STAR_WHITE.png" type="image/png" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+.full-width-line {
+  width: 100%;
+  max-width: 120vw;
+  height: 1px;
+  background-color: white;
+  margin: 5rem; /* spazio verticale fluido */
+}
+
+    html, body {
+      background-color: black;
+      color: white;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      min-height: 82vh;
+      display: flex;
+      flex-direction: column;
+      cursor: none;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.7rem 4rem;
+      font-size: 15px;
+      gap: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      padding: 20px;
+      margin: -20px;
+      cursor: none;
+    }
+
+    .nav-left, .nav-center, .nav-right {
+      display: flex;
+      align-items: center;
+      flex: 1;
+    }
+
+    .nav-left  { justify-content: flex-start; }
+    .nav-center { justify-content: center; }
+    .nav-right  { justify-content: flex-end; }
+
+    .nav-link {
+      white-space: nowrap;
+    }
+
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .content {
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .contact-label {
+      font-size: 17px;
+      margin-bottom: 4rem;
+      text-align: left;
+    }
+
+    .button-grid {
+      display: grid;
+      gap: 0.8rem;
+      justify-content: center;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .contact-button {
+      background: transparent;
+      color: white;
+      font-size: 16px;
+      padding: 1.3rem 0;
+      border: 1px solid white;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: none;
+      max-width: 100%;
+    }
+
+    .contact-button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      margin: 25px;
+      text-align: right;
+      font-size: 14.5px;
+      line-height: 1.6;
+    }
+
+    .custom-cursor {
+      position: fixed;
+      top: 0; left: 0;
+      width: 70px; height: 70px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      background-color: white;
+      mix-blend-mode: difference;
+      transition: transform 0.08s ease-out;
+    }
+
+    @media (max-width: 1024px) {
+      .button-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .contact-label {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav {
+        padding: 1rem 1.5rem;
+      }
+      .button-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 500px;
+        margin: 0 auto;
+}
+
+      .contact-label {
+        text-align: center;
+      }
+
+      .button-grid {
+        grid-template-columns: 1fr;
+        max-width: 275px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-left">
+      <a href="Index.html"><div class="nav-link">Back home</div></a>
+    </div>
+    <div class="nav-center">
+      <a href="https://youtube.com/playlist?list=PLvG3OE6tGIJI1WUCa-3_CI0hSzPfj5XUL&feature=shared" target="_blank" rel="noopener noreferrer">
+        <div class="nav-link">Latest edits</div>
+      </a>
+    </div>
+    <div class="nav-right">
+      <a href="ComingSoon.html"><div class="nav-link">Coming soon</div></a>
+    </div>
+  </nav>
+
+  <hr class="custom-line">
+
+  <!-- Main content -->
+  <main>
+    <div class="content">
+      <div class="contact-label">Contact me:</div>
+      <div class="button-grid">
+        <div class="contact-button">Whatsapp</div>
+        <div class="contact-button">Instagram</div>
+        <div class="contact-button">Email</div>
+        <div class="contact-button">Linkedin</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+
+  <!-- Footer -->
+  <footer>
+    Emanuele Passilongo<br />
+    Portfolio © 2025
+  </footer>
+
+  <script>
+    const cursor = document.querySelector('.custom-cursor');
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.transform = `translate(${e.clientX - 35}px, ${e.clientY - 35}px)`;
+    });
+  </script>
+</body>
+</html>
